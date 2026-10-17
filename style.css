@@ -1,0 +1,625 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: monospace;
+}
+
+main {
+  width: 100%;
+  padding: 1.8em 1.8em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .hero-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  padding-top: clamp(1.5rem, 4vw, 3rem);
+  padding-bottom: clamp(1.5rem, 4vw, 3rem);
+  animation: heroIn 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+main .hero-text .labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  font-size: clamp(0.7rem, 1.05vw, 0.9rem);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+main .hero-text .wordmark {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  font-size: clamp(4rem, 20vw, 16rem);
+  font-weight: 100;
+  line-height: 0.8;
+  letter-spacing: -0.02em;
+}
+main .hero-text .wordmark span {
+  display: block;
+}
+main .hero-text .subline {
+  display: flex;
+  justify-content: flex-end;
+  font-size: clamp(0.75rem, 1.5vw, 1.1rem);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+@media (prefers-reduced-motion: reduce) {
+  main .hero-text {
+    animation: none;
+  }
+}
+main .image-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main .image-text .top {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+main .image-text .top img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+main .image-text .bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main .image-text .bottom h1 {
+  font-size: 3.5rem;
+  font-weight: 100;
+  line-height: 0.8;
+}
+main .image-text .bottom p {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+main .image-text .bottom .services {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
+main .image-text .bottom .services .service {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+main .image-text .bottom .services p {
+  font-family: sans-serif;
+  font-size: 2.1rem;
+  font-weight: 100;
+}
+main .vertical {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .vertical .top {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+main .vertical .top img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+main .vertical .bottom {
+  display: flex;
+  gap: 2.5em;
+}
+main .vertical .bottom p {
+  writing-mode: vertical-lr;
+  padding-top: 0.5em;
+  font-size: 1.5em;
+}
+main .vertical .bottom .text h1 {
+  font-size: clamp(2rem, 10.5vw, 4rem);
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 1em;
+}
+main .vertical .bottom .text p {
+  writing-mode: initial;
+  font-size: 1.5em;
+  opacity: 0.5;
+  line-height: 1.5em;
+}
+main .services .hero h1 {
+  font-size: 4rem;
+  font-weight: 100;
+  padding: 0.3em 0em;
+}
+main .services .element {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .services .element .top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+main .services .element .top h1 {
+  font-size: 2.2em;
+  font-weight: 100;
+}
+main .services .element .top p {
+  opacity: 0.5;
+  font-size: 1.4em;
+  line-height: 1.4em;
+}
+main .services .image {
+  width: 100%;
+}
+main .services .image img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+main .selected {
+  width: 100%;
+}
+main .selected .line {
+  margin-top: 4em;
+}
+main .selected hr {
+  margin-top: 1.5em;
+}
+main .selected .hero {
+  font-size: 4em;
+  font-weight: 100;
+  padding: 0.4em 0em;
+}
+main .selected .note {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  opacity: 0.5;
+  max-width: 46ch;
+  margin: 0.5em 0em 1em;
+}
+main .selected .names .top .hide {
+  display: none;
+}
+main .selected .names .top .show {
+  width: 100%;
+}
+main .selected .names .top .show img {
+  width: 100%;
+  object-fit: cover;
+}
+main .selected .names .bottom .text .status {
+  font-size: 1.1em;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 0.6em;
+}
+main .selected .names .bottom .text h1 {
+  font-size: clamp(2rem, 9vw, 4em);
+  font-weight: 100;
+  padding-top: 0.4em;
+  padding-bottom: 0.2em;
+}
+main .selected .names .bottom .text p {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+main .selected .names .bottom .text p + p {
+  margin-top: 1em;
+  opacity: 0.6;
+}
+main .selected .names .bottom .meta {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 2em 0em;
+}
+main .selected .names .bottom .meta .index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 2.4em;
+  aspect-ratio: 1/1;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  border-radius: 50%;
+  font-size: 1.1em;
+  opacity: 0.75;
+}
+main .selected .names .bottom .meta .stack {
+  font-size: 1.2em;
+  line-height: 1.4em;
+  letter-spacing: 0.02em;
+  opacity: 0.6;
+}
+main .clients {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5em;
+}
+main .clients .text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+main .clients .text hr {
+  margin: 2em 0em;
+}
+main .clients .text .head h1 {
+  font-size: clamp(3rem, 14vw, 7.5em);
+  font-weight: 100;
+}
+main .clients .text .element {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .clients .text .element h1 {
+  font-size: 2.5em;
+  font-weight: 100;
+}
+main .clients .text .element p {
+  font-size: 1.2em;
+  font-weight: 100;
+}
+main .team {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3em;
+  gap: 1em;
+}
+main .team .top {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  gap: 0.8em;
+}
+main .team .top .head h1 {
+  font-size: 5em;
+  font-weight: 100;
+}
+main .team .top .text p {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+main .team .bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+main .team .bottom .card {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .team .bottom .card .name p {
+  font-size: 2em;
+}
+main .team .bottom .card .image img {
+  width: 100%;
+  object-fit: cover;
+}
+main .team .bottom .card .details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .team .bottom .card .details .role {
+  font-size: 1.2em;
+  opacity: 0.5;
+}
+main .team .bottom .card .para .text p {
+  width: 95%;
+  font-size: 1.5em;
+  opacity: 0.5;
+}
+main .join {
+  margin-inline: -1.8em;
+  box-sizing: border-box;
+  padding: 3rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+main .join .head p {
+  font-size: 1.2em;
+}
+main .join .content h1 {
+  font-size: 3.5em;
+  font-weight: 100;
+  line-height: 1;
+}
+main .join .content .contact {
+  margin-top: 1.5em;
+  font-size: 1.2em;
+  opacity: 0.6;
+}
+main .join .foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5em;
+}
+main .join .foot a {
+  color: inherit;
+  text-decoration: none;
+}
+main .join .foot .primary {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  min-width: 0;
+}
+main .join .foot .primary .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  height: 2.5em;
+  aspect-ratio: 1/1;
+  background-color: white;
+  border-radius: 50%;
+}
+main .join .foot .primary .circle svg {
+  margin-left: 0.3em;
+  fill: black;
+}
+main .join .foot .primary .text {
+  font-size: clamp(0.95rem, 1.6vw, 1.2em);
+  word-break: break-word;
+}
+main .join .foot .profiles {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+main .join .foot .profiles a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 1.2em;
+  letter-spacing: 0.06em;
+  opacity: 0.65;
+  transition: opacity 0.2s ease;
+}
+main .join .foot .profiles a:hover {
+  opacity: 1;
+}
+main .join .foot .profiles a .arrow {
+  fill: currentColor;
+}
+
+@media (min-width: 900px) {
+  main {
+    padding: 4em 4em 0;
+    gap: 4em;
+  }
+  main .image-text {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 4em;
+  }
+  main .image-text .bottom h1 {
+    font-size: 7rem;
+    font-weight: 100;
+    line-height: 0.9em;
+  }
+  main .image-text .bottom p {
+    font-size: 2rem;
+    line-height: 1.4em;
+  }
+  main .image-text .bottom .services {
+    margin-top: auto;
+  }
+  main .image-text .bottom .services .service p {
+    font-size: 2em;
+  }
+  main .vertical {
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+  }
+  main .vertical .top {
+    width: 25%;
+  }
+  main .vertical .bottom {
+    width: 75%;
+    flex-direction: row-reverse;
+  }
+  main .vertical .bottom .text {
+    display: flex;
+    flex-direction: column;
+  }
+  main .vertical .bottom .text h1 {
+    font-size: 8em;
+    font-weight: 100;
+  }
+  main .vertical .bottom .text p {
+    margin-top: auto;
+    width: 45%;
+    opacity: 0.5;
+  }
+  main .services {
+    display: flex;
+    flex-direction: row;
+  }
+  main .services .top {
+    height: 100%;
+  }
+  main .services .top .hero h1 {
+    font-size: 8em;
+    font-weight: 100;
+    line-height: 0.9em;
+  }
+  main .services .topinside {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    width: 90%;
+  }
+  main .services .topinside .top2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+  main .services .topinside .bottom2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+  main .services .bottom {
+    height: 100%;
+    padding-top: 2em;
+  }
+  main .services .bottom .image img {
+    height: 100%;
+  }
+  main .selected {
+    width: 100%;
+  }
+  main .selected .hero {
+    font-size: min(15em, 18vw);
+    font-weight: 100;
+    line-height: 0.5em;
+  }
+  main .selected .names {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 5em;
+  }
+  main .selected .names .top {
+    flex: 0 0 60%;
+    width: auto;
+    display: flex;
+    gap: 2em;
+    margin-bottom: 2em;
+  }
+  main .selected .names .top .show {
+    width: 50%;
+  }
+  main .selected .names .top .show img {
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+  main .selected .names .top .hide {
+    width: 50%;
+    height: 53.2vh;
+    display: inherit;
+  }
+  main .selected .names .top .hide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  main .selected .names .bottom {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  main .selected .names .bottom .text h1 {
+    font-size: clamp(2rem, 4vw, 4em);
+  }
+  main .selected .try .names {
+    flex-direction: row-reverse;
+  }
+  main .clients {
+    width: 60%;
+    position: relative;
+    left: 40%;
+  }
+  main .clients .text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  main .clients .text hr {
+    opacity: 0.5;
+  }
+  main .clients .text .element {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main .clients .text .element .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3em;
+  }
+  main .team {
+    margin-bottom: 3em;
+  }
+  main .team .top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4em;
+  }
+  main .team .top .head h1 {
+    font-size: 10em;
+    font-weight: 100;
+  }
+  main .team .top .text {
+    width: 32%;
+  }
+  main .team .bottom {
+    display: flex;
+    flex-direction: row;
+  }
+  main .team .bottom .card .image img {
+    height: 35em;
+  }
+  main hr {
+    width: 50%;
+    position: relative;
+    left: 50%;
+  }
+  main .join {
+    margin-inline: -4em;
+  }
+  main .join .content h1 {
+    font-size: 6em;
+    font-weight: 100;
+  }
+}
+@keyframes heroIn {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
