@@ -418,8 +418,13 @@ main .join .foot .profiles a .arrow {
 
 @media (min-width: 900px) {
   main {
-    padding: 4em 4em 0;
+    padding: 2em 4em 0;
     gap: 4em;
+  }
+  main .hero-text {
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    gap: 1.5rem;
   }
   main .image-text {
     display: flex;
@@ -497,6 +502,7 @@ main .join .foot .profiles a .arrow {
   main .services .bottom {
     height: 100%;
     padding-top: 2em;
+    flex: 0 0 36.22%;
   }
   main .services .bottom .image img {
     height: 100%;

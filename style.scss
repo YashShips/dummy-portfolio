@@ -509,8 +509,14 @@ main{
 
 @media (min-width: 900px) {
     main{
-        padding: 4em 4em 0;
+        padding: 2em 4em 0;
         gap: 4em;
+
+        .hero-text{
+            padding-top: 1.5rem;
+            padding-bottom: 0.5rem;
+            gap: 1.5rem;
+        }
 
         .image-text{
             display: flex;
@@ -609,6 +615,7 @@ main{
             .bottom{
                 height: 100%;
                 padding-top: 2em;
+                flex: 0 0 36.22%;
 
                 .image{
                     img{
